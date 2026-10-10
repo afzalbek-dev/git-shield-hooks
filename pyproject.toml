@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "git-shield-hooks"
+version = "1.0.0"
+description = "Git Pre-commit Security Scanner for API Keys, Secrets and Oversized Blobs"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Afzalbek", email = "afzalbek.dev@gmail.com"}]
+dependencies = []
+
+[project.scripts]
+git-shield = "git_shield.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
